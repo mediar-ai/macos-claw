@@ -361,27 +361,22 @@ export default function Home() {
           </div>
 
           <div className="grid gap-6 lg:grid-cols-2">
-            {/* Build from source */}
+            {/* Install via npm */}
             <div className="overflow-hidden rounded-xl border border-border bg-surface">
               <div className="flex items-center justify-between border-b border-border px-5 py-3">
-                <span className="text-sm font-medium text-muted">Build from source</span>
+                <span className="text-sm font-medium text-muted">Install via npm</span>
                 <span className="font-mono text-xs text-zinc-600">bash</span>
               </div>
               <pre className="overflow-x-auto p-5 font-mono text-sm leading-7">
                 <code>
                   <span className="text-muted">$</span>{" "}
-                  <span className="text-foreground">git clone</span>{" "}
-                  <span className="text-cyan-300">https://github.com/mediar-ai/mcp-server-macos-use</span>
-                  {"\n"}
-                  <span className="text-muted">$</span>{" "}
-                  <span className="text-foreground">cd</span>{" "}
+                  <span className="text-foreground">npm install</span>{" "}
                   <span className="text-cyan-300">mcp-server-macos-use</span>
-                  {"\n"}
-                  <span className="text-muted">$</span>{" "}
-                  <span className="text-foreground">swift build</span>{" "}
-                  <span className="text-amber-400">-c release</span>
                 </code>
               </pre>
+              <div className="border-t border-border px-5 py-3">
+                <p className="text-xs text-zinc-500">Requires Xcode &amp; Swift. Builds automatically on install.</p>
+              </div>
             </div>
 
             {/* Claude Desktop config */}
@@ -404,7 +399,7 @@ export default function Home() {
                   {"\n"}
                   {"      "}<span className="text-cyan-300">&quot;command&quot;</span>
                   <span className="text-zinc-500">:</span>{" "}
-                  <span className="text-amber-400">&quot;&lt;path-to-binary&gt;/MacosUseMCP&quot;</span>
+                  <span className="text-amber-400">&quot;npx mcp-server-macos-use&quot;</span>
                   {"\n"}
                   {"    "}<span className="text-zinc-500">{"}"}</span>
                   {"\n"}
@@ -415,6 +410,28 @@ export default function Home() {
               </pre>
             </div>
           </div>
+
+          {/* Build from source (collapsible) */}
+          <details className="mt-6 rounded-xl border border-border bg-surface">
+            <summary className="cursor-pointer px-5 py-3 text-sm font-medium text-muted hover:text-foreground transition-colors">
+              Or build from source
+            </summary>
+            <pre className="overflow-x-auto border-t border-border p-5 font-mono text-sm leading-7">
+              <code>
+                <span className="text-muted">$</span>{" "}
+                <span className="text-foreground">git clone</span>{" "}
+                <span className="text-cyan-300">https://github.com/mediar-ai/mcp-server-macos-use</span>
+                {"\n"}
+                <span className="text-muted">$</span>{" "}
+                <span className="text-foreground">cd</span>{" "}
+                <span className="text-cyan-300">mcp-server-macos-use</span>
+                {"\n"}
+                <span className="text-muted">$</span>{" "}
+                <span className="text-foreground">swift build</span>{" "}
+                <span className="text-amber-400">-c release</span>
+              </code>
+            </pre>
+          </details>
         </div>
       </section>
 
