@@ -360,30 +360,30 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid gap-6 lg:grid-cols-2">
-            {/* Install via npm */}
-            <div className="overflow-hidden rounded-xl border border-border bg-surface">
-              <div className="flex items-center justify-between border-b border-border px-5 py-3">
-                <span className="text-sm font-medium text-muted">Install via npm</span>
-                <span className="font-mono text-xs text-zinc-600">bash</span>
-              </div>
-              <pre className="overflow-x-auto p-5 font-mono text-sm leading-7">
-                <code>
-                  <span className="text-muted">$</span>{" "}
-                  <span className="text-foreground">npm install</span>{" "}
-                  <span className="text-cyan-300">mcp-server-macos-use</span>
-                </code>
-              </pre>
-              <div className="border-t border-border px-5 py-3">
-                <p className="text-xs text-zinc-500">Requires Xcode &amp; Swift. Builds automatically on install.</p>
-              </div>
+          {/* Claude Code one-liner */}
+          <div className="mb-6 overflow-hidden rounded-xl border border-accent/30 bg-accent/5">
+            <div className="flex items-center justify-between border-b border-accent/20 px-5 py-3">
+              <span className="text-sm font-medium text-accent">Claude Code</span>
+              <span className="font-mono text-xs text-accent/60">one command</span>
             </div>
+            <pre className="overflow-x-auto p-5 font-mono text-sm leading-7">
+              <code>
+                <span className="text-muted">$</span>{" "}
+                <span className="text-foreground">claude mcp add</span>{" "}
+                <span className="text-cyan-300">macos-use</span>{" "}
+                <span className="text-zinc-500">--</span>{" "}
+                <span className="text-foreground">npx</span>{" "}
+                <span className="text-amber-400">mcp-server-macos-use</span>
+              </code>
+            </pre>
+          </div>
 
+          <div className="grid gap-6 lg:grid-cols-2">
             {/* Claude Desktop config */}
             <div className="overflow-hidden rounded-xl border border-border bg-surface">
               <div className="flex items-center justify-between border-b border-border px-5 py-3">
-                <span className="text-sm font-medium text-muted">Claude Desktop config</span>
-                <span className="font-mono text-xs text-zinc-600">JSON</span>
+                <span className="text-sm font-medium text-muted">Claude Desktop</span>
+                <span className="font-mono text-xs text-zinc-600">claude_desktop_config.json</span>
               </div>
               <pre className="overflow-x-auto p-5 font-mono text-sm leading-7">
                 <code>
@@ -399,7 +399,14 @@ export default function Home() {
                   {"\n"}
                   {"      "}<span className="text-cyan-300">&quot;command&quot;</span>
                   <span className="text-zinc-500">:</span>{" "}
-                  <span className="text-amber-400">&quot;npx mcp-server-macos-use&quot;</span>
+                  <span className="text-amber-400">&quot;npx&quot;</span>
+                  <span className="text-zinc-500">,</span>
+                  {"\n"}
+                  {"      "}<span className="text-cyan-300">&quot;args&quot;</span>
+                  <span className="text-zinc-500">:</span>{" "}
+                  <span className="text-zinc-500">[</span>
+                  <span className="text-amber-400">&quot;mcp-server-macos-use&quot;</span>
+                  <span className="text-zinc-500">]</span>
                   {"\n"}
                   {"    "}<span className="text-zinc-500">{"}"}</span>
                   {"\n"}
@@ -408,6 +415,24 @@ export default function Home() {
                   <span className="text-zinc-500">{"}"}</span>
                 </code>
               </pre>
+            </div>
+
+            {/* Install via npm */}
+            <div className="overflow-hidden rounded-xl border border-border bg-surface">
+              <div className="flex items-center justify-between border-b border-border px-5 py-3">
+                <span className="text-sm font-medium text-muted">npm</span>
+                <span className="font-mono text-xs text-zinc-600">bash</span>
+              </div>
+              <pre className="overflow-x-auto p-5 font-mono text-sm leading-7">
+                <code>
+                  <span className="text-muted">$</span>{" "}
+                  <span className="text-foreground">npm install</span>{" "}
+                  <span className="text-cyan-300">mcp-server-macos-use</span>
+                </code>
+              </pre>
+              <div className="border-t border-border px-5 py-3">
+                <p className="text-xs text-zinc-500">Requires Xcode &amp; Swift. Builds the Swift binary automatically on install.</p>
+              </div>
             </div>
           </div>
 
