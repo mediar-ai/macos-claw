@@ -5,9 +5,9 @@ import { PostHogProvider as PHProvider } from "posthog-js/react";
 import { useEffect } from "react";
 import Script from "next/script";
 
-const POSTHOG_KEY = "phc_aJRMgtAD1FWl349tmYoxt1jBSfZwJnRdwikPDoR0Z2A";
+const POSTHOG_KEY = "phc_TmJqKnDNWV7IBhayQBuMfuMVBjCPNbt4lDG93XbCDB9";
 const POSTHOG_HOST = "https://us.i.posthog.com";
-const CRISP_WEBSITE_ID = "11e6e4bd-b3df-4e47-8a9f-7fbde1d448a8";
+const CRISP_WEBSITE_ID = "7d3318a0-dcce-4508-928e-530b74adc7fc";
 
 declare global {
   interface Window {
